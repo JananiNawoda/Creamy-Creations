@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Creamy-Creations</string>
+    <string name="et_app_name">Creamy Creations</string>
+    <string name="fullName">Full Name</string>
+    <string name="Email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone">Phone Number</string>
+    <string name="btn_reg">Register</string>
+    <string name="et_link2">New Here? Create Account</string>
+    <string name="btn_login">Login</string>
+    <string name="button">LOGOUT</string>
+    <string name="btn_log">LOGIN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

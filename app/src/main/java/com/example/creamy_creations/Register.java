@@ -18,29 +18,36 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class login extends AppCompatActivity {
-    EditText mEmail,mpassword;
-    Button mLoginBtn;
-    TextView mCreateBtn;
-    ProgressBar progressBar;
+public class Register extends AppCompatActivity {
+    EditText mfullName,mEmail,mpassword,mphone;
+    Button mRegisterBtn;
+    TextView mLogin_btn;
     FirebaseAuth fAuth;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
+        mfullName = findViewById(R.id.fullName);
         mEmail = findViewById(R.id.Email);
         mpassword = findViewById(R.id.password);
-        mLoginBtn = findViewById(R.id.btn_login);
-        mCreateBtn = findViewById(R.id.createText);
-        fAuth = FirebaseAuth.getInstance();
-        progressBar = findViewById(R.id.progressBar2);
+        mphone = findViewById(R.id.phone);
+        mRegisterBtn = findViewById(R.id.btn_reg);
+        mLogin_btn = findViewById(R.id.createText);
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+        fAuth = FirebaseAuth.getInstance();
+        progressBar = findViewById(R.id.progressBar);
+
+        if(fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
+
+        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String email = mEmail.getText().toString().trim();
                 String password = mpassword.getText().toString().trim();
 
@@ -57,28 +64,32 @@ public class login extends AppCompatActivity {
                     return;
                 }
                 progressBar.setVisibility(view.VISIBLE);
-                //authenticate the user
-                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+                //register the user in firebase
+
+                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         }else{
-                            Toast.makeText(login.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(view.GONE);
                         }
                     }
                 });
-
             }
         });
-        mCreateBtn.setOnClickListener(new View.OnClickListener() {
+
+        mLogin_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Register.class));
+                startActivity(new Intent(getApplicationContext(),login.class));
             }
         });
+
+
 
     }
 }
