@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img1"
+            android:layout_width="95dp"
+            android:layout_height="92dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nametext"
+            android:text="Cake Name"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/size"
+            android:text="Size"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_below="@+id/nametext"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:text="Price"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/img1"
+            android:layout_below="@+id/size"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_below="@id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="#F8F0F0"
+                android:textStyle="bold"
+                app:backgroundTint="#D3E91E63" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="#F5F4F2F3"
+                android:textStyle="bold"
+                app:backgroundTint="#D3E91E63" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
