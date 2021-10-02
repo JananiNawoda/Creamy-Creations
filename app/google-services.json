@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "943498481499",
+    "firebase_url": "https://creamycreation-239aa-default-rtdb.firebaseio.com",
+    "project_id": "creamycreation-239aa",
+    "storage_bucket": "creamycreation-239aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943498481499:android:faae7967ae64e14fb0147e",
+        "android_client_info": {
+          "package_name": "com.example.creamycreation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943498481499-s3r8ughctus0b77b83lqjr082egtq55v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ0_XHZu_VnRtzCCmxCuvKikU-gTdjV_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943498481499-s3r8ughctus0b77b83lqjr082egtq55v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943498481499:android:47fd531e1cdfae6db0147e",
+        "android_client_info": {
+          "package_name": "cream.creation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943498481499-s3r8ughctus0b77b83lqjr082egtq55v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ0_XHZu_VnRtzCCmxCuvKikU-gTdjV_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "943498481499-s3r8ughctus0b77b83lqjr082egtq55v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

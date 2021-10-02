@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CreamyCreation</string>
+    <string name="rEmail">Email Address</string>
+    <string name="rPassword">Password</string>
+    <string name="newName">Full Name</string>
+    <string name="emailAddress">Email Address</string>
+    <string name="newPassword">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="newPhone">Phone Number</string>
+    <string name="newAddress">Address</string>
+    <string name="newResetPassword">Enter New Password</string>
+    <string name="confirmResetPassword">Confirm Password</string>
+    <string name="resetEmailAddress">Enter New Email Address</string>
+    <string name="reset_email_pop">Email Address</string>
+    <string name="newResetNumber">Enter Your Phone number</string>
+    <string name="confirmResetPhone">Enter Your Phone Number Again</string>
+</resources>
